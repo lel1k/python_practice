@@ -1,26 +1,26 @@
 1. Найти все числа от 1 до 1000, которые делятся на 17
 ```python
-print(list(filter(lambda x: x % 17 == 0 , range(1,1001))))
+list(filter(lambda x: x % 17 == 0 , range(1,1001)))
 ```
 2. Найти все числа от 1 до 1000, которые содержат в себе цифру 2
 ```python
-print(list(filter(lambda x: '2' in str(x), range(1,1001))))
+list(filter(lambda x: '2' in str(x), range(1,1001)))
 ```
 3. Найти все числа от 1 до 10000, которые являются палиндромом	
 ```python
-print(list(filter(lambda x: str(x) == str(x)[::-1], range(1,10001))))
+list(filter(lambda x: str(x) == str(x)[::-1], range(1,10001)))
 ```
 4. Посчитать количество пробелов в строке
 ```python
-print(len([1 for el in string if el == ' ']))
+len([1 for el in string if el == ' '])
 ```
 5. Есть любая последовательность непробельных символов латинского алфавита, удалить все гласные из этого слова
 ```python
-print(''.join(list(filter(lambda x: x not in "AaEeIiOoUu", string))))
+''.join(list(filter(lambda x: x not in "AaEeIiOoUu", string)))
 ```
 6. На входе строка со словами, разделенными через 1 пробел. Найти все слова, длина которых не больше 5
 ```python
-print(list(filter(lambda x: len(x) <= 5, string.split())))
+list(filter(lambda x: len(x) <= 5, string.split()))
 ```
 7. На входе строка со словами, разделенными через 1 пробел. Получить словарь, где в качестве ключа используется само слово, а в значении длина этого слова.
 ```python

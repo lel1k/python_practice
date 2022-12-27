@@ -13,6 +13,9 @@ class Task:
     def get_descr(self):
         return self.__description
 
+    def get_status(self):
+        return self.__status
+
     def change_status(self, new_status):
         self.__status = new_status
 
@@ -81,13 +84,13 @@ class TaskManager:
         return new_complex_task
 
     def get_tasks(self):
-        return self.tasks.values()
+        return list(self.tasks.values())
 
     def get_subtasks(self):
-        return self.subtasks.values()
+        return list(self.subtasks.values())
 
     def get_complex_tasks(self):
-        return self.tasks.values()
+        return list(self.complex_tasks.values())
 
     def get_tasks_by_id(self, id):
         try:
